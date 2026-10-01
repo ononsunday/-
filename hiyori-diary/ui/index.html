@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'"
+    />
+    <title>日和 · 每日计划与日记</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="journal.css" />
+    <link rel="stylesheet" href="refinements.css" />
+    <link rel="stylesheet" href="tonight-viewport.css" />
+    <link rel="preload" href="assets/scenes/today-background.webp" as="image" />
+    <link rel="preload" href="assets/scenes/today-foreground.webp" as="image" />
+  </head>
+  <body>
+    <svg
+      class="symbol-library"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <defs>
+        <symbol id="hiyori-flower" viewBox="0 0 100 100">
+          <g fill="none" stroke="currentColor" stroke-width="1.3">
+            <ellipse cx="50" cy="29" rx="12" ry="22" />
+            <ellipse
+              cx="50"
+              cy="29"
+              rx="12"
+              ry="22"
+              transform="rotate(72 50 50)"
+            />
+            <ellipse
+              cx="50"
+              cy="29"
+              rx="12"
+              ry="22"
+              transform="rotate(144 50 50)"
+            />
+            <ellipse
+              cx="50"
+              cy="29"
+              rx="12"
+              ry="22"
+              transform="rotate(216 50 50)"
+            />
+            <ellipse
+              cx="50"
+              cy="29"
+              rx="12"
+              ry="22"
+              transform="rotate(288 50 50)"
+            />
+            <circle cx="50" cy="50" r="4" />
+          </g>
+        </symbol>
+      </defs>
+    </svg>
+    <a class="skip-link" href="#main">跳到今日记录</a>
+    <div class="app-shell">
+      <header class="brand-bar">
+        <a href="#" class="brand" aria-label="日和，回到今天"
+          ><svg class="brand-flower" aria-hidden="true">
+            <use href="#hiyori-flower" />
+          </svg>
+          <span>日和<small>HIYORI · A LITTLE EVERY DAY</small></span></a
+        ><span class="save-status" role="status">此刻，安心记录</span>
+      </header>
+      <main id="main" tabindex="-1" aria-label="日和记录"></main>
+      <footer class="page-footer">
+        平凡的一天，也值得被记住。<span>HIYORI · YOUR LITTLE DAYS</span>
+      </footer>
+    </div>
+    <nav class="bottom-nav" aria-label="主导航"></nav>
+    <div class="toast" role="status" hidden></div>
+    <dialog id="confirm-dialog"></dialog>
+    <script type="module" src="app.js"></script>
+    <script type="module" src="ui-effects.js"></script>
+  </body>
+</html>

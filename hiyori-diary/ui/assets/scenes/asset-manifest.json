@@ -1,0 +1,220 @@
+{
+  "assets": [
+    {
+      "file": "today-background.webp",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGB",
+      "alpha": null,
+      "bbox": null,
+      "bytes": 257292
+    },
+    {
+      "file": "today-foreground.webp",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA",
+      "alpha": [
+        0,
+        255
+      ],
+      "bbox": [
+        786,
+        0,
+        3039,
+        2160
+      ],
+      "bytes": 289948
+    },
+    {
+      "file": "today-complete.webp",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGB",
+      "alpha": null,
+      "bbox": null,
+      "bytes": 371152
+    },
+    {
+      "file": "today-character.webp",
+      "size": [
+        2253,
+        2160
+      ],
+      "mode": "RGBA",
+      "alpha": [
+        0,
+        255
+      ],
+      "bbox": [
+        0,
+        0,
+        2253,
+        2160
+      ],
+      "bytes": 283342
+    },
+    {
+      "file": "today-leaf.webp",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA",
+      "alpha": [
+        0,
+        255
+      ],
+      "bbox": [
+        2040,
+        0,
+        2521,
+        1011
+      ],
+      "bytes": 58838
+    },
+    {
+      "file": "tonight-background.webp",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGB",
+      "alpha": null,
+      "bbox": null,
+      "bytes": 206942
+    },
+    {
+      "file": "tonight-foreground.webp",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA",
+      "alpha": [
+        0,
+        255
+      ],
+      "bbox": [
+        425,
+        534,
+        1240,
+        2113
+      ],
+      "bytes": 183078
+    },
+    {
+      "file": "tonight-complete.webp",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGB",
+      "alpha": null,
+      "bbox": null,
+      "bytes": 275880
+    },
+    {
+      "file": "tonight-character.webp",
+      "size": [
+        815,
+        1579
+      ],
+      "mode": "RGBA",
+      "alpha": [
+        0,
+        255
+      ],
+      "bbox": [
+        0,
+        0,
+        815,
+        1579
+      ],
+      "bytes": 156098
+    },
+    {
+      "file": "history-cover.webp",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGB",
+      "alpha": null,
+      "bbox": null,
+      "bytes": 724320
+    },
+    {
+      "file": "tonight-grass.webp",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGBA",
+      "alpha": [
+        0,
+        255
+      ],
+      "bbox": [
+        0,
+        94,
+        3840,
+        2160
+      ],
+      "bytes": 1281550
+    },
+    {
+      "file": "tonight-sky.webp",
+      "size": [
+        3840,
+        2160
+      ],
+      "mode": "RGB",
+      "alpha": null,
+      "bbox": null,
+      "bytes": 73010
+    },
+    {
+      "file": "history-character-mask.png",
+      "size": [
+        4274,
+        2404
+      ],
+      "mode": "RGBA",
+      "alpha": [
+        255,
+        255
+      ],
+      "maskMode": "luminance",
+      "bytes": 309026,
+      "source": "Wallpaper Engine 3459218400 / 人物蒙版1.tex"
+    }
+  ],
+  "sourceWorkshopIds": [
+    "3558034522",
+    "3370333034",
+    "3459218400"
+  ],
+  "conversion": "PKG indexing; TEX LZ4 and pixel decoding; saved scene transform/color composition; eye MDL rest-mesh rasterization; no original scripts executed",
+  "formatReference": "https://github.com/Almamu/linux-wallpaperengine/blob/main/src/WallpaperEngine/Data/Parsers/TextureParser.cpp",
+  "meshReference": "https://github.com/wqlouis/pkg_parser/blob/crate/src/pkg_parser/mdl_parser.rs",
+  "creditsFromLocalProject": {
+    "3370333034": {
+      "title": "爱莉希雅(崩坏星穹铁道-PV）"
+    },
+    "3459218400": {
+      "title": "利兹与青鸟"
+    },
+    "3558034522": {
+      "artist": "虎皮玄椒",
+      "artSource": "https://www.pixiv.net/artworks/123655095",
+      "sceneAuthor": "bai22331"
+    }
+  }
+}

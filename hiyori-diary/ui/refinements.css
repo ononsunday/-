@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/* 每日一句保留正文和出处，不增加栏目标签。长句撑开页首，不遮住记录。 */
+.today-opening { --opening-min: 345px; height: max(var(--opening-min),var(--quote-content-size,0px)); }
+.day-background, .day-foreground { height: calc(max(var(--opening-min),var(--quote-content-size,0px)) + 47px); }
+.daily-quote { margin: 17px 0 0; max-width: 440px; letter-spacing: 0; }
+.quote-text { border: 0; padding: 0; margin: 0; font: 17px/1.8 var(--serif); overflow-wrap: anywhere; }
+.daily-quote[lang="en"] .quote-text { font: 16px/1.65 Georgia,"Times New Roman",serif; }
+.quote-source { margin-top: 8px; color: var(--muted); font: 10px/1.7 "Microsoft YaHei",sans-serif; }
+.date-header { width: 30%; padding-bottom: 27px; }
+
+/* 人物在纸页前面，纸页的左内边距给发丝和衣摆留出交叠空间。
+   插画原图右半边是留白；等比放大后向上平移，人物才会占满左侧。 */
+body[data-page="history"] .app-shell { max-width: 1520px; }
+.history-view { display: grid; grid-template-columns: minmax(0,31fr) minmax(0,69fr); gap: 0; align-items: start; position: relative; isolation: isolate; }
+/* 列变窄时补回人物原宽度，只向左平移；不缩放人物，左侧边缘由窗口裁切。 */
+.history-portrait { position: sticky; z-index: 2; top: 100px; margin-top: 48px; width: calc(100% * 46 / 31); transform: translateX(calc(-100% * 15 / 46)); aspect-ratio: .91; height: auto; min-height: 0; overflow: visible; pointer-events: none; }
+.history-portrait .history-art { position: absolute; width: 245%; height: auto; max-width: none; left: -8%; right: auto; top: -25%; bottom: auto; object-fit: contain; mix-blend-mode: normal; opacity: 1; filter: none;
+  mask-image: url("assets/scenes/history-character-mask.png"),linear-gradient(#000 86%,transparent 98%);
+  mask-size: 100% 100%; mask-repeat: no-repeat; mask-mode: luminance,alpha; mask-composite: intersect;
+}
+[data-page="history"] .history-records .view-heading { min-height: 0; padding: 0 0 10px; }
+.history-records { position: relative; z-index: 1; min-width: 0; min-height: 560px; margin-top: 22px; padding: 35px 28px 38px clamp(60px,5.5vw,92px); background: var(--paper); border: 1px solid var(--line); border-radius: 4px 18px 18px 4px; box-shadow: var(--shadow); }
+.history-records .history-list { margin: 0; max-width: none; }
+.history-records .history-card { padding-left: 0; padding-right: 0; }
+.history-records .history-card:hover { background: var(--soft); }
+.history-records .history-preview { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; white-space: normal; }
+[data-theme="dark"] .history-portrait .history-art { mix-blend-mode: normal; opacity: .96; }
+
+@media (max-width: 720px) {
+  .today-opening { --opening-min: 330px; }
+  .date-header { width: 35%; }
+  .quote-text { font-size: 15px; line-height: 1.75; }
+  .daily-quote[lang="en"] .quote-text { font-size: 14px; line-height: 1.7; }
+  .quote-source { font-size: 9px; }
+  .history-view { grid-template-columns: minmax(0,36fr) minmax(0,64fr); overflow-x: clip; }
+  .history-portrait { margin-top: 46px; top: 85px; width: 100%; transform: none; }
+  .history-portrait .history-art { width: 230%; left: -6%; top: -21%; }
+  .history-records { padding: 27px 18px 28px 30px; min-height: 460px; }
+  .history-records .view-heading h1 { font-size: 27px; }
+  .history-records .history-card { gap: 15px; }
+}
+@media (max-width: 600px) {
+  .history-view { display: block; position: relative; }
+  .history-portrait { position: absolute; left: -10px; top: -28px; width: 49%; max-width: 235px; height: auto; min-height: 0; margin: 0; }
+  .history-records { margin-top: 64px; padding: 25px 19px 30px; }
+  [data-page="history"] .history-records .view-heading { min-height: 170px; padding: 12px 0 24px 53%; }
+  .history-records .view-heading h1 { font-size: 25px; }
+  .history-records .view-heading .eyebrow { font-size: 7px; letter-spacing: 1.2px; }
+  .history-records .view-heading .view-description { font-size: 11px; }
+}
+@media (max-width: 480px) {
+  .today-opening { --opening-min: 360px; }
+  .date-header { width: 44%; }
+  .date-title h1 { font-size: 20px; }
+  .daily-quote { margin-top: 14px; }
+  .quote-text { font-size: 14px; }
+  .daily-quote[lang="en"] .quote-text { font-size: 13px; }
+  .quote-source { font-size: 8px; }
+}

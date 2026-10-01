@@ -1,0 +1,9 @@
+{
+  "name": "hiyori-diary",
+  "private": true,
+  "version": "1.2.1",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.js"
+  }
+}
